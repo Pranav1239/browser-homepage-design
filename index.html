@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/logo.png" />
+    <title>Homepage</title>
+  </head>
+  <body>
+    <main>
+      <div class="container-main">
+        <div class="fitem-main">
+          <h1>LOREM</h1>
+        </div>
+      </div>
+      <div class="container-second">
+        <p>LOREM</p>
+        <p>LOREM</p>
+        <p>LOREM</p>
+      </div>
+      <div id="search-container" style="margin-top: 2%">
+        <div id="search-input-container">
+          <img
+            src="https://assets.codepen.io/1468070/Google+G+Icon.png"
+            alt=""
+          />
+          <input type="text" autocomplete="off" placeholder="Search anything" id="search" />
+        </div>
+        <button id="image-button" onclick="googleSearch();" type="button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+    </main>
+    <footer>
+      <div class="Footer" style="margin-top: 1%">
+        <a href="https://www.instagram.com/" target="_blank" style="color: darkviolet;">Instagram</a>
+        <a href="https://spotify.com/" target="_blank" style="color: darkgreen;">Spotify</a>
+        <a href="https://www.hotstar.com/" target="_blank" style="color: dodgerblue">Hotstar</a>
+        <a href="https://www.netflix.com/" target="_blank" style="color: darkred">Netflix</a>
+        <a href="https://www.youtube.com/" target="_blank" style="color: red;">Youtube</a>
+        <a href="https://github.com/" target="_blank" style="color: darkgrey;">Github</a>
+      </div>
+      <div class="Footer">
+        <a href="https://stackoverflow.com/" target="_blank" style="color: orange">StackOverflow</a>
+        <a href="https://mail.google.com/" target="_blank" style="color: beige">Gmail</a>
+        <a href="https://chat.openai.com/" target="_blank" style="color: darkolivegreen;">ChatGPT</a>
+      </div>
+      <div class="Footer">
+        <a href="http://localhost:3000/" target="_blank" style="color: palevioletred">LocalHost</a>
+      </div>
+    </footer>
+    <script>
+      function googleSearch() {
+        var text = document.getElementById("search").value;
+        var cleanQuery = text.replace(" ", "+", text);
+        var url = "http://www.google.com/search?q=" + cleanQuery;
+
+        window.location.href = url;
+      }
+    </script>
+    <script
+      async
+      src="https://cse.google.com/cse.js?cx=YOUR_ENGINE_ID"
+    ></script>
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/23d53d131f.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
